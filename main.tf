@@ -2,7 +2,7 @@ resource "aws_spot_instance_request" "stable_diffusion" {
   ami                         = var.ami_id
   instance_type               = var.instance_type
   key_name                    = var.key_name
-  spot_price                  = var.spot_price
+  spot_price                  = var.spot_price * 1.2
   subnet_id                   = var.vpc_name != "" ? data.aws_subnets.selected.0.ids.0 : null
   vpc_security_group_ids = var.security_group_name != "" ? [data.aws_security_group.selected.0.id] : null
   spot_type                   = "one-time"
