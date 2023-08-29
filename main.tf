@@ -10,8 +10,9 @@ resource "aws_spot_instance_request" "stable_diffusion" {
   associate_public_ip_address = true
 
   root_block_device {
-    volume_type           = "gp2"
+    volume_type           = "io2"
     volume_size           = var.disk_size
+    iops                  = var.disk_iops
     encrypted             = false
     delete_on_termination = true
   }

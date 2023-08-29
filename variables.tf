@@ -2,12 +2,12 @@
 variable "instance_type" {
   type = string
   description = "Instance type"
-  default = "g4dn.xlarge"
+  default = "g4dn.2xlarge"
 }
 
 variable "spot_price" {
   description = "The price for spot instance"
-  default = "0.24192"
+  default = ""
 }
 
 variable "ami_id" {
@@ -21,6 +21,11 @@ variable "disk_size" {
   default = 100
 }
 
+variable "disk_iops" {
+  type = number
+  description = "IOPS of the root disk"
+  default = 40000
+}
 variable "vpc_name" {
   type = string
   description = "VPC Name"
