@@ -10,7 +10,7 @@ variable "spot_price" {
   default = ""
 }
 
-# @options ["1.0", "1.1", "1.2", "1.3", "1.4", "1.5"]
+# @options [1.0, 1.1, 1.2, 1.3, 1.4, 1.5]
 variable "increase_rate" {
   type = number
   description = "Spot price increase rate"
