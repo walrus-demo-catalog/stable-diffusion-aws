@@ -10,6 +10,13 @@ variable "spot_price" {
   default = ""
 }
 
+# @options ["1.0", "1.1", "1.2", "1.3", "1.4", "1.5"]
+variable "increase_rate" {
+  type = number
+  description = "Spot price increase rate"
+  default = 1.3
+}
+
 variable "ami_id" {
   description = "The ID of the AMI used to launch the EC2 instance"
   default     = "ami-0a093cfdcd72ee5dd"
