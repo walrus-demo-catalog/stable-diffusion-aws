@@ -7,6 +7,7 @@ resource "aws_instance" "stable_diffusion" {
   associate_public_ip_address = true
   
   instance_market_options {
+    market_type = spot
     spot_options {
       max_price = var.spot_price * var.increase_rate
       spot_instance_type = "one-time"
